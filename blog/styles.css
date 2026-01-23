@@ -427,17 +427,26 @@ footer {
     }
 }
 
+/* Global image constraint - ensures all images in articles stay within bounds */
+article img {
+    max-width: 100%;
+    height: auto;
+}
+
 /* Image Gallery Styles */
 .image-gallery {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 15px;
     margin: 30px 0;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .image-gallery img {
     width: 100%;
-    height: 250px;
+    height: 180px;
     object-fit: cover;
     border-radius: 8px;
     box-shadow: 0 2px 8px rgba(0,0,0,0.15);
@@ -451,7 +460,7 @@ footer {
 
 .image-gallery figcaption {
     text-align: center;
-    font-size: 0.9em;
+    font-size: 0.85em;
     color: #666;
     margin-top: 8px;
     font-style: italic;
@@ -464,10 +473,14 @@ footer {
 /* Hero/Featured Image */
 .hero-image {
     width: 100%;
-    max-height: 400px;
+    max-width: 500px;
+    max-height: 300px;
     object-fit: cover;
     border-radius: 8px;
     margin-bottom: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
     box-shadow: 0 4px 12px rgba(0,0,0,0.15);
 }
 
@@ -486,7 +499,7 @@ footer {
 }
 
 .memorial-image {
-    max-width: 100%;
+    max-width: 400px;
     height: auto;
     border-radius: 8px;
     box-shadow: 0 4px 12px rgba(0,0,0,0.15);
@@ -495,14 +508,15 @@ footer {
 
 /* Quality of Life Metric Figure */
 .quality-metric-figure {
-    margin: 30px 0;
+    margin: 30px auto;
     text-align: center;
+    max-width: 400px;
 }
 
 .quality-metric-figure img {
-    max-width: 600px;
-    width: 100%;
-    height: auto;
+    max-width: 100%;
+    max-height: 300px;
+    object-fit: cover;
     border-radius: 8px;
     box-shadow: 0 4px 12px rgba(0,0,0,0.15);
 }
@@ -516,9 +530,23 @@ footer {
 @media (max-width: 768px) {
     .image-gallery {
         grid-template-columns: 1fr;
+        max-width: 300px;
     }
     
     .image-gallery img {
-        height: 200px;
+        height: 160px;
+    }
+    
+    .hero-image {
+        max-width: 100%;
+        max-height: 250px;
+    }
+    
+    .quality-metric-figure {
+        max-width: 300px;
+    }
+    
+    .quality-metric-figure img {
+        max-height: 250px;
     }
 }
