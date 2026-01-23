@@ -345,3 +345,84 @@ footer {
         font-size: 1.5em;
     }
 }
+
+/* Upcoming Topics Section */
+.upcoming-topics {
+    background: linear-gradient(135deg, #f0f7ff 0%, #e8f0ff 100%);
+    border-left: 4px solid #667eea;
+    padding: 25px 30px;
+    border-radius: 8px;
+    margin-bottom: 25px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.08);
+}
+
+.upcoming-topics h3 {
+    margin: 0 0 15px 0;
+    color: #667eea;
+    font-size: 1.2em;
+}
+
+.upcoming-topics ul {
+    margin: 0;
+    padding-left: 20px;
+}
+
+.upcoming-topics li {
+    color: #444;
+    line-height: 1.6;
+    margin-bottom: 8px;
+}
+
+/* Favourite Tools Section */
+.favourite-tools {
+    background-color: white;
+    padding: 30px;
+    border-radius: 8px;
+    margin-bottom: 40px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.favourite-tools h3 {
+    margin: 0 0 20px 0;
+    color: #2c3e50;
+    font-size: 1.3em;
+}
+
+.tool-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+}
+
+.tool-card {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border-radius: 8px;
+    text-decoration: none;
+    color: white;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.tool-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(102, 126, 234, 0.4);
+}
+
+.tool-name {
+    font-weight: 600;
+    font-size: 1.05em;
+    margin-bottom: 5px;
+}
+
+.tool-desc {
+    font-size: 0.85em;
+    opacity: 0.9;
+}
+
+@media (max-width: 768px) {
+    .tool-grid {
+        grid-template-columns: 1fr;
+    }
+}
