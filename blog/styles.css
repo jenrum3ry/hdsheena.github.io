@@ -187,7 +187,14 @@ footer {
 
 .blog-posts {
     display: grid;
+    grid-template-columns: repeat(2, 1fr);
     gap: 20px;
+}
+
+@media (max-width: 768px) {
+    .blog-posts {
+        grid-template-columns: 1fr;
+    }
 }
 
 .post-card {
