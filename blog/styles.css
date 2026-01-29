@@ -238,6 +238,12 @@ footer {
     font-size: 0.95em;
 }
 
+/* Quick Reference / Highlighted Post Card */
+.post-card-highlight {
+    border-left: 4px solid #e74c3c;
+    background: linear-gradient(135deg, #fff5f5 0%, #ffffff 100%);
+}
+
 .summary-list li {
     color: #555;
     margin-bottom: 6px;
