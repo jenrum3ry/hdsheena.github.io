@@ -233,17 +233,24 @@ footer {
 }
 
 .post-card {
+    display: block;
     background-color: #FFFDF9;
     padding: 28px 32px;
     border-radius: 8px;
     box-shadow: 0 1px 4px rgba(61,50,41,0.08);
-    transition: box-shadow 0.3s;
+    transition: box-shadow 0.3s, border-left-color 0.3s;
     border-left: 3px solid transparent;
+    text-decoration: none;
+    cursor: pointer;
 }
 
 .post-card:hover {
     box-shadow: 0 2px 8px rgba(61,50,41,0.13);
     border-left-color: #D4C4B0;
+}
+
+.post-card:hover .read-link {
+    color: #8B7355;
 }
 
 .post-card h2 {
@@ -261,20 +268,12 @@ footer {
     line-height: 1.7;
 }
 
-.post-card a {
+.read-link {
     display: inline-block;
     color: #6B4E3D;
-    padding: 0;
-    text-decoration: none;
     font-weight: 600;
     font-size: 0.95em;
-    background: none;
     transition: color 0.2s;
-}
-
-.post-card a:hover {
-    color: #8B7355;
-    background: none;
 }
 
 /* Summary lists in post cards */
